@@ -1,0 +1,129 @@
+/*? global styles - definicion */
+/* Aqui se definen los estilos generales, formateo de pagina a nivel general
+*/
+
+/*! IMPORTS */
+/* Se importan fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*! ROOT FORMAT */
+/* Se formatea la raiz del documento entero * */
+* {
+  font-family: 'Gantari', sans-serif; /* sin remates */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*! GENERAL
+/* Estilos generales (metemos tambien el root) */
+body #root {
+  height: 100vh;
+  margin: 0;
+}
+
+/* Diferenciamos por .app porque hemos metido un nuevo div debajo */
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* sidebar + contenido */
+  height: 100vh;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* sidebar + contenido */
+  height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid #1c60f1;
+  border-radius: 20px;
+}
+
+.sidebar_logo {
+  margin: 20px;
+  padding: 20px;
+  height: 40px;
+  width: auto;
+  border-bottom: 1px solid black;
+}
+
+.sidebar_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sidebar a {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #1c60f1;
+  color: white;
+}
+
+.sidebar a:hover {
+  background-color: #43cf96;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.content {
+  padding-right: 10px;
+}
+
+/* Header */
+.header {
+  height: 12vh;
+  margin-top: 10px;
+  border: 2px solid #1c60f1;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+
+/* Botón IFC */
+.button-ifc {
+  margin-right: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 40px;
+  font-size: 14px;
+  background-color: #1c60f1;
+  color: white;
+  border-radius: 100px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.button-ifc:hover {
+  background-color: #43cf96;
+}
+
+/* ===== ZONA DEL VISOR (de momento caja gris) ===== */
+.viewer-placeholder {
+  height: calc(100vh - 12vh - 30px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #1c60f1;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
